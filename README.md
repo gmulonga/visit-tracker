@@ -65,6 +65,16 @@ lib/
 
 ---
 
+## 📌 Assumptions, Trade-offs & Limitations
+
+- **Assumes a stable internet connection unless offline support is implemented.**:
+
+- **Form validation is basic and can be improved with more robust rules.**:
+
+- **No login/auth screen included unless manually integrated.**:
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the project
