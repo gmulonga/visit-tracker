@@ -18,18 +18,39 @@ architecture. It includes custom UI widgets, state management, and optional offl
 
 ## 🧱 Project Structure
 
+## 🧱 Project Structure
+
+```plaintext
 lib/
 ├── main.dart
 ├── app/
-│ ├── bindings/ # Dependency injection setup
-│ ├── controllers/ # State management controllers
-│ ├── data/
-│ │ ├── models/ # Data models for Visit, Customer, Activity
-│ │ └── services/ # API layer (or Firebase service)
-│ ├── pages/ # UI screens
-│ └── routes/ # App navigation
-└── widgets/ # Custom reusable widgets
-
+│   ├── bindings/              # Dependency injection setup
+│   │   └── app_bindings.dart
+│   ├── controllers/           # State management controllers
+│   │   ├── visit_controller.dart
+│   │   ├── customer_controller.dart
+│   │   └── activity_controller.dart
+│   ├── data/
+│   │   ├── models/            # Data models
+│   │   │   ├── visit_model.dart
+│   │   │   ├── customer_model.dart
+│   │   │   └── activity_model.dart
+│   │   └── services/          # API/Firebase services
+│   │       ├── api_service.dart
+│   │       └── api_constants.dart
+│   ├── pages/                 # UI screens
+│   │   ├── home_page.dart
+│   │   ├── add_visit_page.dart
+│   │   ├── visit_detail_page.dart
+│   │   └── stats_page.dart
+│   └── routes/                # App navigation
+│       ├── app_pages.dart
+│       └── app_routes.dart
+└── widgets/                   # Custom reusable widgets
+    ├── visit_card.dart
+    ├── custom_text_field.dart
+    └── loading_widget.dart
+```
 
 ---
 
