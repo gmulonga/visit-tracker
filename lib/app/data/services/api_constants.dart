@@ -14,3 +14,5 @@ const kGreen = Color(0xFF129990);
 const kWhite = Color(0xFFFFFFFF);
 const kLightGreen = Color(0xFFDDF6D2);
 const kGrey = Color(0xFF7F8CAA);
+
+const kNormalFont = 18.0;
