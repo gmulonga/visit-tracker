@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/visit_controller.dart';
-import '../../widgets/visit_card.dart';
 import 'package:visit_tracker/app/routes/app_routes.dart';
 
+import '../../widgets/visit_card.dart';
+import '../controllers/visit_controller.dart';
 import '../data/services/api_constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,7 +12,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Visits Tracker', style: TextStyle(color: kWhite),), backgroundColor: kGreen,),
+      backgroundColor: kGrey,
+      appBar: AppBar(
+        title: Text('Visits Tracker', style: TextStyle(color: kWhite)),
+        backgroundColor: kGreen,
+      ),
       body: Obx(() {
         if (visitController.isLoading.value) {
           return Center(child: CircularProgressIndicator());
@@ -30,7 +34,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: kGreen,
         onPressed: () => Get.toNamed(Routes.ADD_VISIT),
-        child: Icon(Icons.add, color: kWhite,),
+        child: Icon(Icons.add, color: kWhite),
         shape: CircleBorder(),
       ),
     );

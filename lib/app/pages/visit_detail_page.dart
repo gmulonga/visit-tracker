@@ -50,7 +50,7 @@ class VisitDetailPage extends StatelessWidget {
           return Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: kWhite,
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
@@ -63,11 +63,10 @@ class VisitDetailPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Customer name
                 Text(
                   customer.name,
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: kGreen,
                   ),
@@ -125,21 +124,16 @@ class VisitDetailPage extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 24),
-
-                // Activities done title
                 Text(
                   'Activities Done:',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: kNormalFont + 2,
+                    fontSize: 20,
                     color: kGreen,
                   ),
                 ),
                 const SizedBox(height: 8),
-
-                // Activities list
                 ...matchedActivities.map(
                   (a) => Padding(
                     padding: const EdgeInsets.symmetric(vertical: 2),
