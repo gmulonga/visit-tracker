@@ -7,7 +7,6 @@ import '../../widgets/custom_text_field.dart';
 import '../controllers/visit_controller.dart';
 import '../controllers/activity_controller.dart';
 import '../data/models/visit_model.dart';
-import '../data/models/activity_model.dart';
 
 class AddVisitPage extends StatefulWidget {
   @override
