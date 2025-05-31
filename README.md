@@ -18,8 +18,6 @@ architecture. It includes custom UI widgets, state management, and optional offl
 
 ## 🧱 Project Structure
 
-## 🧱 Project Structure
-
 ```plaintext
 lib/
 ├── main.dart
