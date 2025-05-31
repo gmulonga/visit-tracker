@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controllers/visit_controller.dart';
+import '../../widgets/visit_card.dart';
+import 'package:visit_tracker/app/routes/app_routes.dart';
+
+class HomePage extends StatelessWidget {
+  final VisitController visitController = Get.find();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Visits Tracker')),
+      body: Obx(() {
+        if (visitController.isLoading.value) {
+          return Center(child: CircularProgressIndicator());
+        } else if (visitController.visits.isEmpty) {
+          return Center(child: Text('No visits available'));
+        }
+        return ListView.builder(
+          itemCount: visitController.visits.length,
+          itemBuilder: (context, index) {
+            final visit = visitController.visits[index];
+            return VisitCard(visit: visit);
+          },
+        );
+      }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Get.toNamed(Routes.ADD_VISIT),
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
