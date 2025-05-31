@@ -1,16 +1,68 @@
-# visit_tracker
+# 📱 Visit Tracker Flutter App
 
-A new Flutter project.
+A Flutter-based Visit Tracker app for managing visits, customers, and activities. The app is
+structured for maintainability, with a clear separation of concerns using controller-service-model
+architecture. It includes custom UI widgets, state management, and optional offline support.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📸 Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+> Add images in a `/screenshots` folder and reference them here.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- ![Home Page](screenshots/home.jpeg)
+- ![Add Visit](screenshots/add.jpeg)
+- ![Visit Detail](screenshots/detail.jpeg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧱 Project Structure
+
+lib/
+├── main.dart
+├── app/
+│ ├── bindings/ # Dependency injection setup
+│ ├── controllers/ # State management controllers
+│ ├── data/
+│ │ ├── models/ # Data models for Visit, Customer, Activity
+│ │ └── services/ # API layer (or Firebase service)
+│ ├── pages/ # UI screens
+│ └── routes/ # App navigation
+└── widgets/ # Custom reusable widgets
+
+
+---
+
+## 🧠 Architectural Decisions
+
+- **MVC-ish Separation**:  
+  Controllers manage state, models represent structured data, services handle API/Firebase logic.
+
+- **Modular Structure**:  
+  Code is organized by responsibility: UI, data, logic, and routing are in distinct folders.
+
+- **Dependency Injection**:  
+  `bindings/` handles controller injection to reduce tight coupling.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the project
+
+```bash
+git clone https://github.com/gmulonga/visit-tracker.git
+cd visit-tracker
+```
+
+### Install flutter packages
+
+```bash
+flutter pub get
+```
+
+### Run the app
+
+```bash
+flutter run
+```
