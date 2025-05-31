@@ -92,6 +92,7 @@ class _AddVisitPageState extends State<AddVisitPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kGrey,
       appBar: AppBar(
         title: Text('Add Visit', style: TextStyle(color: kWhite)),
         backgroundColor: kGreen,

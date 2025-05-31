@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import '../data/services/api_service.dart';
+
 import '../data/models/visit_model.dart';
+import '../data/services/api_service.dart';
 
 class VisitController extends GetxController {
   var visits = <Visit>[].obs;
@@ -27,6 +28,7 @@ class VisitController extends GetxController {
   Future<void> addVisit(Visit visit) async {
     try {
       await ApiService.addVisit(visit);
+      Get.snackbar('Success', 'You have added a visit');
       fetchVisits();
     } catch (e) {
       Get.snackbar('Error', 'Failed to add visit');

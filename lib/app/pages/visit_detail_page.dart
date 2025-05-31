@@ -37,6 +37,7 @@ class VisitDetailPage extends StatelessWidget {
             .toList();
 
     return Scaffold(
+      backgroundColor: kGrey,
       appBar: AppBar(
         title: Text('Visit Details', style: TextStyle(color: kWhite)),
         backgroundColor: kGreen,
@@ -160,7 +161,6 @@ class VisitDetailPage extends StatelessWidget {
           );
         }),
       ),
-      backgroundColor: Colors.grey[100],
     );
   }
 }
