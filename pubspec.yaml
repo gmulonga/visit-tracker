@@ -18,6 +18,8 @@ dependencies:
   http: ^1.4.0
   intl: ^0.20.2
   animations: ^2.0.11
+  mockito: ^5.4.6
+  build_runner: ^2.4.15
 
 dev_dependencies:
   flutter_test:
